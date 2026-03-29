@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Console\Commands;
+declare(strict_types=1);
+
+namespace Semmelsamu\Imgs;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;

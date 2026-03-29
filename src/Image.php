@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components;
+namespace Semmelsamu\Imgs;
 
 use Closure;
 use Exception;
