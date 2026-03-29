@@ -1,0 +1,18 @@
+{
+    "name": "semmelsamu/imgs",
+    "description": "Image optimizing library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Semmelsamu\\Imgs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samuel Kroiß",
+            "email": "mail@samuelkroiss.de"
+        }
+    ],
+    "require": {}
+}
