@@ -2,11 +2,10 @@
 
 namespace semmelsamu;
 
-include("../Imgs.php");
-
+include '../Imgs.php';
 
 $imgs = new Imgs(enable_cache: false);
 
-$imgs->string("crop.png");
+$imgs->string('crop.png');
 
 $imgs->image();

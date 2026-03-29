@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Semmelsamu\Imgs;
 
+use App\Imgs;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 
@@ -30,7 +31,7 @@ class OptimizeImages extends Command
      */
     public function handle()
     {
-        $imgs = app(\App\Imgs::class);
+        $imgs = app(Imgs::class);
 
         if ($this->option('rebuild')) {
             $this->info('Removing output directory...');

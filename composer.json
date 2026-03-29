@@ -25,5 +25,8 @@
                 "Semmelsamu\\Imgs\\PackageServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.29"
     }
 }
