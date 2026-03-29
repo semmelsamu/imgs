@@ -138,7 +138,7 @@ class Imgs
      */
     public function process(string $image, int $width, string $output): void
     {
-        $image = Image::read($image);
+        $image = Image::decode($image);
         $image->scaleDown(width: $width);
         $image->save($output, quality: $this->OUTPUT_QUALITY);
     }
