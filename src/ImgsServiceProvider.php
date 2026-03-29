@@ -38,7 +38,7 @@ class ImgsServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'imgs');
         
-        Blade::component('imgs', Image::class);
+        Blade::component('image', Image::class);
 
         if ($this->app->runningInConsole()) {
             $this->commands([Optimize::class]);
