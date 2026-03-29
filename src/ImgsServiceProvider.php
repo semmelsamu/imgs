@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Semmelsamu\Imgs;
 
 use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class ImgsServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {

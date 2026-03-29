@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Semmelsamu\\Imgs\\ServiceProvider"
+                "Semmelsamu\\Imgs\\PackageServiceProvider"
             ]
         }
     }
