@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Semmelsamu\Imgs;
+namespace Semmelsamu\Imgs\Commands;
 
-use App\Imgs;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Semmelsamu\Imgs\Imgs;
 
-class OptimizeImages extends Command
+class Optimize extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:optimize-images 
+    protected $signature = 'imgs:optimize
                             {--cleanup : Remove orphaned output files after processing}
                             {--rebuild : Clear output directory and reprocess all images}';
 
@@ -24,13 +24,14 @@ class OptimizeImages extends Command
      *
      * @var string
      */
-    protected $description = 'Optimize all images via Imgs';
+    protected $description = 'Optimize and resize all source images via Imgs';
 
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): int
     {
+        /** @var Imgs $imgs */
         $imgs = app(Imgs::class);
 
         if ($this->option('rebuild')) {
@@ -50,5 +51,7 @@ class OptimizeImages extends Command
         }
 
         $this->info('Done.');
+
+        return self::SUCCESS;
     }
 }
