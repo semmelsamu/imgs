@@ -36,22 +36,17 @@ class ImgsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Load views under the "imgs" namespace
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'imgs');
-
-        // Register <x-imgs> Blade component
+        
         Blade::component('imgs', Image::class);
 
         if ($this->app->runningInConsole()) {
-            // Register the artisan command
             $this->commands([Optimize::class]);
 
-            // Allow users to publish the config
             $this->publishes([
                 __DIR__.'/../config/imgs.php' => config_path('imgs.php'),
             ], 'imgs-config');
 
-            // Allow users to publish and customise the views
             $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/imgs'),
             ], 'imgs-views');
