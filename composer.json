@@ -14,5 +14,16 @@
             "email": "mail@samuelkroiss.de"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^13.0",
+        "intervention/image": "^4.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Semmelsamu\\Imgs\\ServiceProvider"
+            ]
+        }
+    }
 }
