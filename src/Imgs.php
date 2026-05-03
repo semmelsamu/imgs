@@ -101,6 +101,10 @@ class Imgs
         echo 'Discovering images...'.PHP_EOL;
 
         $files = [];
+        
+        if (! file_exists($this->INPUT_DIR)) {
+            throw new \Exception("Imgs input directory does not exist");
+        }
 
         $iterator = new \RecursiveIteratorIterator(
             new \RecursiveDirectoryIterator(
