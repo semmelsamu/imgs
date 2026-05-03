@@ -103,7 +103,7 @@ class Imgs
         $files = [];
         
         if (! file_exists($this->INPUT_DIR)) {
-            throw new \Exception("Imgs input directory does not exist");
+            throw new \Exception("Imgs input directory does not exist: " .$this->INPUT_DIR);
         }
 
         $iterator = new \RecursiveIteratorIterator(
